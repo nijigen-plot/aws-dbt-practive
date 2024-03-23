@@ -1,0 +1,29 @@
+[project]
+name = "aws-dbt-practice"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "nijigen-plot", email = "quark_hardcore@yahoo.co.jp" }
+]
+dependencies = [
+    "dbt-athena-community==1.7.1",
+]
+readme = "README.md"
+requires-python = ">= 3.11"
+
+[project.scripts]
+hello = "aws_dbt_practice:hello"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/aws_dbt_practice"]

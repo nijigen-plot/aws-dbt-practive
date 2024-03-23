@@ -1,0 +1,23 @@
+
+version: 2
+
+models:
+  - name: event_sales
+    description: "eventの年別sales"
+    columns:
+      - name: eventid
+        description: "eventのid"
+        tests:
+          - unique
+          - not_null
+      - name: pricepaid
+        description: "支払い金額"
+        tests:
+          - not_null
+  - name: event_yearly_sales
+    description: "年別sales"
+    columns:
+      - name: year
+        description: >
+          Primary Key
+          年ですよ年
